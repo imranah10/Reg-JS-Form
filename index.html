@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <style>
+      #heading {
+        text-align: center;
+      }
+      .outer {
+        min-height: 200px;
+        width: 300px;
+        background: linear-gradient(45deg, red, orange);
+        margin: 50px auto;
+        padding: 20px;
+        font-size: 20px;
+      }
+      .header {
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        color: white;
+        text-align: center;
+      }
+      #left {
+        width: 150px;
+        height: 45px;
+        float: left;
+        background-color: black;
+      }
+      #right {
+        width: 150px;
+        height: 45px;
+        float: left;
+        background-color: black;
+      }
+      .a:hover {
+        background-color: white !important;
+        color: black !important;
+        cursor: pointer;
+      }
+      .txt {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        padding-left: 8px;
+        margin-bottom: 5px;
+      }
+      .btn {
+        width: 100%;
+        height: 40px;
+        border: none;
+        background-color: black;
+        color: white;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: white;
+        color: black;
+      }
+      #Reg,
+      #Login {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="heading">
+        <h1>REGISTRATION FORM</h1>
+        <h3>Display block & none</h3>
+    </div>
+    
+    <div class="outer">
+      <div class="header">
+        <div id="left" class="a" onclick="Reg()">REGISTER</div>
+        <div id="right" class="a" onclick="Log()">LOGIN</div>
+      </div>
+
+      <div id="Reg">
+        <h2>REGISTER</h2>
+        Name:<br />
+        <input type="text" id="txt" placeholder="name.." class="txt" /><br />
+        Email:<br />
+        <input type="email" id="txt" placeholder="email" class="txt" /><br />
+        Password:<br />
+        <input
+          type="password"
+          id="txt"
+          placeholder="password"
+          class="txt"
+        /><br />
+
+        <input type="submit" value="Save" class="btn" />
+      </div>
+
+      <div id="Login">
+        <h2>LOGIN</h2>
+        Email:<br />
+        <input type="text" id="txt" placeholder="name.." class="txt" /><br />
+        Password:<br />
+        <input
+          type="password"
+          id="txt"
+          placeholder="password"
+          class="txt"
+        /><br />
+        <input type="submit" value="Login" class="btn" />
+      </div>
+    </div>
+
+    <script>
+      var L = document.getElementById("Login");
+      var R = document.getElementById("Reg");
+      var Log = () => {
+        L.style.display = "block";
+        R.style.display = "none";
+      };
+
+      var Reg = () => {
+        R.style.display = "block";
+        L.style.display = "none";
+      };
+    </script>
+    <!-- <script src="index.js"></script> -->
+  </body>
+</html>
